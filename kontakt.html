@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontakt — Marc Ingold</title>
+<meta name="description" content="Kontakt zu Marc Ingold: E-Mail, Telefon, Standort und ein kurzes Formular. Offen für Gespräche, Praktika und Projekte.">
+<meta name="theme-color" content="#003741">
+<link rel="icon" href="assets/logo-navy.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<noscript><style>[data-reveal],[data-reveal-stagger]>*{opacity:1!important;transform:none!important}.hero__title .line>span{transform:none!important}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header class="site-header site-header--inner">
+  <div class="site-header__inner">
+    <a class="brand" href="index.html" aria-label="Marc Ingold – zur Startseite">
+      <span class="brand__cream"><img src="assets/logo-cream.svg" alt="Marc Ingold" width="46" height="49"></span>
+      <span class="brand__navy"><img src="assets/logo-navy.svg" alt="Marc Ingold" width="46" height="49"></span>
+    </a>
+    <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav">
+      <span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span>
+    </button>
+    <nav class="nav" id="nav" aria-label="Hauptnavigation">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="lebenslauf.html">Lebenslauf</a>
+      <a class="nav__link" href="unterlagen.html">Unterlagen</a>
+      <a class="nav__link" href="kontakt.html" aria-current="page">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="contact bg-navy" aria-labelledby="k-title">
+    <div class="wrap">
+
+      <header class="contact__head" data-reveal>
+        <p class="eyebrow">03 / Kontakt</p>
+        <h1 class="contact__title" id="k-title">Schreib mir.<br>Bevor du zögerst.</h1>
+        <p class="contact__intro">Ob Praktikum, Schnuppertage, ein Projekt oder einfach eine Frage – ich freue mich über jede Nachricht und melde mich meistens schnell zurück.</p>
+      </header>
+
+      <div class="contact__body">
+
+        <div class="contact__details" data-reveal>
+          <a class="contact__row" href="mailto:mail@platzhalter.ch">
+            <span class="contact__row-k">E-Mail</span>
+            <span class="contact__row-v">mail@platzhalter.ch</span>
+            <span class="contact__row-i" aria-hidden="true">↗</span>
+          </a>
+          <a class="contact__row" href="tel:+41000000000">
+            <span class="contact__row-k">Telefon</span>
+            <span class="contact__row-v">+41 00 000 00 00</span>
+            <span class="contact__row-i" aria-hidden="true">↗</span>
+          </a>
+          <div class="contact__row contact__row--static">
+            <span class="contact__row-k">Standort</span>
+            <span class="contact__row-v">Interlaken, CH</span>
+            <span class="contact__row-i" aria-hidden="true"></span>
+          </div>
+          <p class="contact__note">E-Mail, Telefon und Standort sind noch Platzhalter – die echten Angaben kommen später rein.</p>
+        </div>
+
+        <div class="contact__formcol" data-reveal>
+          <div class="contact__formwrap">
+            <form class="form form--card" data-email="mail@platzhalter.ch" novalidate>
+              <div class="field-group">
+                <label for="f-name">Dein Name</label>
+                <input type="text" id="f-name" name="name" autocomplete="name" placeholder="z. B. Alex Muster" required>
+              </div>
+              <div class="field-group">
+                <label for="f-email">Deine E-Mail</label>
+                <input type="email" id="f-email" name="email" autocomplete="email" placeholder="z. B. alex@firma.ch" required>
+              </div>
+              <div class="field-group">
+                <label for="f-message">Deine Nachricht</label>
+                <textarea id="f-message" name="message" placeholder="Worum geht es?" required></textarea>
+              </div>
+              <button type="submit" class="btn">Nachricht senden <span class="btn__icon" aria-hidden="true">→</span></button>
+              <p class="form__status" role="status" hidden></p>
+            </form>
+          </div>
+          <p class="contact__fineprint">
+            Ohne Server-Anbindung öffnet der Button dein Mailprogramm. Für direkten Versand
+            <code>data-endpoint</code> am Formular auf einen Formspree-/Basin-Link setzen.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__top">
+      <div>
+        <img class="site-footer__brand" src="assets/logo-cream.svg" alt="Marc Ingold">
+        <p class="site-footer__line">Marc Ingold</p>
+        <p style="color:var(--navy-50);font-size:var(--step--1);margin-top:.4rem">Mediamatik · Gestaltung · Digital</p>
+      </div>
+      <nav class="site-footer__nav" aria-label="Footer-Navigation">
+        <a href="index.html">Home</a>
+        <a href="lebenslauf.html">Lebenslauf</a>
+        <a href="unterlagen.html">Unterlagen</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <div class="site-footer__nav">
+        <a href="mailto:mail@platzhalter.ch">mail@platzhalter.ch</a>
+        <a href="tel:+41000000000">+41 00 000 00 00</a>
+        <span style="color:var(--navy-50);font-size:var(--step--1)">Interlaken, CH</span>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <span>&copy; <span data-year>2026</span> Marc Ingold</span>
+      <span>Diese Seite ist gebaut, um eine Reaktion zu bekommen. Hat es geklappt?</span>
+    </div>
+  </div>
+</footer>
+
+<div class="cursor-follow" aria-hidden="true">Ansehen</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

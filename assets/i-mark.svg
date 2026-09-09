@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 34" role="img" aria-label="">
+  <g fill="#ef6c65">
+    <circle cx="9.4" cy="6.4" r="5.4"/>
+    <path d="M4 14h9v9.4c0 5.4-3.6 8.4-9 8.6z"/>
+  </g>
+  <g fill="#f8b133">
+    <circle cx="13.4" cy="6.4" r="5.4"/>
+    <path d="M8 14h9v9.4c0 5.4-3.6 8.4-9 8.6z"/>
+  </g>
+</svg>
