@@ -15,14 +15,11 @@ gesamtes Verhalten in `assets/js/main.js`. GSAP + ScrollTrigger via CDN (mit Fal
 - Texte auf Deutsch, **Schweizer Rechtschreibung** (`ss` statt `ß`).
 - Ton: kurz, persönlich, selbstbewusst, kein Marketing-Deutsch. Leitgedanke der ganzen
   Seite: „Was löst Gestaltung beim Menschen aus?“ — nicht bloss behaupten, zeigen.
-<<<<<<< HEAD
 - **Keine KI-Erwähnungen** im sichtbaren Text, in Meta-Tags oder JSON-LD. Kompetenz­felder:
   Design & Layout, Foto & Video, Web & Digital, Office (vier Stück).
 - **Keine sichtbaren Platzhalter oder Notizen an den Betreiber** (kein „Platzhalter“,
   keine „Datei XY ersetzen“-Hinweise, keine `onerror`-Fallbacks auf `_ph-*`). Die Seite
   ist publishfertig; Rohdaten/Notizen liegen in `../_Website-Rohdaten (nicht publizieren)/`.
-=======
->>>>>>> 9b5cc321cfe41b26916753e92e287a85df951b5f
 - Farben nur über CSS-Variablen in `:root`. Navy `#003741` + Sand/Cream = Basis;
   Gelb `#F8B133`, Koralle `#EF6C65`, Türkis `#00A6A6` = feste Akzente pro Projekt/Feld.
 - Typo: Archivo (Display/Struktur) + Inter (Fliesstext), Google Fonts.
@@ -36,7 +33,6 @@ gesamtes Verhalten in `assets/js/main.js`. GSAP + ScrollTrigger via CDN (mit Fal
 - Hero = kinematischer Lichtstrahl: zwei Bildebenen (`.hero__layer--cold` dunkel/kühl,
   `.hero__layer--warm` diagonal beschnitten, hell/warm) + `.hero__beam` Glow.
 
-<<<<<<< HEAD
 ## Portfolio (Home)
 
 - 11 Projekte in 5 Bereichen (`.disc` mit `.disc__label`): Web, Illustration, Layout,
@@ -78,13 +74,6 @@ gesamtes Verhalten in `assets/js/main.js`. GSAP + ScrollTrigger via CDN (mit Fal
 - Bilder mit `sips` klein halten (Hero/Porträt < 300 KB); `width`/`height` an jedem `<img>`.
 - Zum Publizieren nur `*.html` + `assets/` hochladen. `CLAUDE.md`, `README.md`,
   `skills-lock.json` und `../_Website-Rohdaten …/` gehören nicht auf den Server.
-=======
-## Platzhalter (siehe README.md)
-
-Porträt, Projektbilder, Video-Poster, Bewerbungsvideo, 3 PDF und alle Kontaktdaten
-(`mail@platzhalter.ch`, `+41 00 000 00 00`, `Interlaken, CH`) sind Platzhalter und
-klar als solche markiert. Bilder haben `onerror`-Fallbacks auf `assets/img/_ph-*.svg`.
->>>>>>> 9b5cc321cfe41b26916753e92e287a85df951b5f
 
 ## Lokal testen
 
