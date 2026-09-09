@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Unterlagen — Marc Ingold</title>
-<meta name="description" content="Bewerbungsunterlagen von Marc Ingold zum Download: Lebenslauf, Portfolio und Zeugnisse als druckfreundliche PDF.">
+<meta name="description" content="Bewerbungsunterlagen von Marc Ingold zum Download: Lebenslauf sowie Zeugnisse, Diplome und ECDL-Nachweise als PDF.">
 <meta name="theme-color" content="#003741">
 <link rel="icon" href="assets/logo-navy.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
-<noscript><style>[data-reveal],[data-reveal-stagger]>*{opacity:1!important;transform:none!important}.hero__title .line>span{transform:none!important}</style></noscript>
+<noscript><style>[data-reveal],[data-reveal-stagger]>*{opacity:1!important;transform:none!important}.hero__title .line>span{transform:none!important}.doc__panel{grid-template-rows:1fr}.doc__toggle{display:none}</style></noscript>
 </head>
 <body>
 <a class="skip-link" href="#main">Zum Inhalt springen</a>
@@ -51,49 +51,87 @@
         <span class="doc__no">01</span>
         <div class="doc__body">
           <h3>Lebenslauf</h3>
-          <p>Mein Werdegang, die Stationen und die Skills – kompakt auf einer Seite, ohne Effekte.</p>
-          <p class="doc__meta">PDF · ca. 0,3 MB · Platzhalter</p>
+          <p>Mein Werdegang, die Stationen und die Skills – kompakt auf einer Seite, druckfreundlich.</p>
+          <p class="doc__meta">PDF</p>
         </div>
-        <a class="doc__dl" href="assets/docs/lebenslauf.pdf" download aria-label="Lebenslauf als PDF herunterladen">
+        <a class="doc__dl" href="assets/docs/lebenslauf.pdf" download="Marc Ingold – Lebenslauf.pdf" aria-label="Lebenslauf als PDF herunterladen">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" fill="none" stroke="currentColor" stroke-width="2"/></svg><span class="doc__dl-text">PDF öffnen</span></a>
       </div>
 
-      <div class="doc" style="--accent:var(--coral)">
+      <div class="doc doc--group" style="--accent:var(--teal)">
         <span class="doc__no">02</span>
         <div class="doc__body">
-          <h3>Portfolio</h3>
-          <p>Ausgewählte Arbeiten aus Gestaltung, Foto, Video und Web – als zusammenhängende Sammlung.</p>
-          <p class="doc__meta">PDF · ca. 0,3 MB · Platzhalter</p>
-        </div>
-        <a class="doc__dl" href="assets/docs/portfolio.pdf" download aria-label="Portfolio als PDF herunterladen">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" fill="none" stroke="currentColor" stroke-width="2"/></svg><span class="doc__dl-text">PDF öffnen</span></a>
-      </div>
-
-      <div class="doc" style="--accent:var(--teal)">
-        <span class="doc__no">03</span>
-        <div class="doc__body">
           <h3>Zeugnisse &amp; Zertifikate</h3>
-          <p>Schulzeugnisse und Nachweise, gesammelt in einem Dokument.</p>
-          <p class="doc__meta">PDF · ca. 0,3 MB · Platzhalter</p>
+          <p>Zeugnisse, Diplome und ECDL-Nachweise – aufklappen und einzeln herunterladen.</p>
+          <p class="doc__meta">8 Dokumente</p>
         </div>
-        <a class="doc__dl" href="assets/docs/zeugnisse.pdf" download aria-label="Zeugnisse und Zertifikate als PDF herunterladen">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" fill="none" stroke="currentColor" stroke-width="2"/></svg><span class="doc__dl-text">PDF öffnen</span></a>
+        <button class="doc__toggle" aria-expanded="false" aria-controls="doc-zeugnisse"
+                aria-label="Zeugnisse und Zertifikate ein- oder ausklappen"></button>
+        <div class="doc__panel" id="doc-zeugnisse">
+          <div>
+            <ul class="filelist">
+              <li class="file">
+                <span class="file__name">Lehrvertrag</span>
+                <span class="file__meta">BiCT AG, Bern &middot; 2025&ndash;2029</span>
+                <a class="file__dl" href="assets/docs/lehrvertrag.pdf" download="Marc Ingold – Lehrvertrag.pdf" aria-label="Lehrvertrag herunterladen">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>PDF</span></a>
+              </li>
+              <li class="file">
+                <span class="file__name">Schulzeugnis 1. Lehrjahr</span>
+                <span class="file__meta">BBZ &middot; Mediamatiker EFZ</span>
+                <a class="file__dl" href="assets/docs/schulzeugnis-1-lehrjahr.pdf" download="Marc Ingold – Schulzeugnis 1. Lehrjahr.pdf" aria-label="Schulzeugnis 1. Lehrjahr herunterladen">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>PDF</span></a>
+              </li>
+              <li class="file">
+                <span class="file__name">Diplom Berufswahljahr</span>
+                <span class="file__meta">NOSS Schulzentrum, Spiez &middot; 2025</span>
+                <a class="file__dl" href="assets/docs/sekundar-abschlussdiplom.pdf" download="Marc Ingold – Diplom Berufswahljahr.pdf" aria-label="Diplom Berufswahljahr herunterladen">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>PDF</span></a>
+              </li>
+              <li class="file">
+                <span class="file__name">Zeugnis Berufswahljahr</span>
+                <span class="file__meta">NOSS Schulzentrum, Spiez &middot; 9. Schuljahr</span>
+                <a class="file__dl" href="assets/docs/sekundar-zeugnis-9-klasse.pdf" download="Marc Ingold – Zeugnis Berufswahljahr.pdf" aria-label="Zeugnis Berufswahljahr herunterladen">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>PDF</span></a>
+              </li>
+              <li class="file">
+                <span class="file__name">Beurteilungsbericht 8. Schuljahr</span>
+                <span class="file__meta">Berntorschule Thun &middot; 2023/2024</span>
+                <a class="file__dl" href="assets/docs/sekundar-beurteilungsbericht.pdf" download="Marc Ingold – Beurteilungsbericht 8. Schuljahr.pdf" aria-label="Beurteilungsbericht 8. Schuljahr herunterladen">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>PDF</span></a>
+              </li>
+              <li class="file">
+                <span class="file__name">ECDL Computer-Grundlagen</span>
+                <span class="file__meta">Prüfungsergebnis &middot; 2024</span>
+                <a class="file__dl" href="assets/docs/ecdl-computer-grundlagen.pdf" download="Marc Ingold – ECDL Computer-Grundlagen.pdf" aria-label="ECDL Computer-Grundlagen herunterladen">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>PDF</span></a>
+              </li>
+              <li class="file">
+                <span class="file__name">ECDL Tabellenkalkulation</span>
+                <span class="file__meta">Prüfungsergebnis &middot; 2024</span>
+                <a class="file__dl" href="assets/docs/ecdl-tabellenkalkulation.pdf" download="Marc Ingold – ECDL Tabellenkalkulation.pdf" aria-label="ECDL Tabellenkalkulation herunterladen">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>PDF</span></a>
+              </li>
+              <li class="file">
+                <span class="file__name">ECDL Bildbearbeitung</span>
+                <span class="file__meta">Prüfungsergebnis &middot; 2024</span>
+                <a class="file__dl" href="assets/docs/ecdl-bildbearbeitung.pdf" download="Marc Ingold – ECDL Bildbearbeitung.pdf" aria-label="ECDL Bildbearbeitung herunterladen">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>PDF</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
 
-    </div>
-
-    <div class="docs-aside" data-reveal>
-      <p class="eyebrow">Hinweis</p>
-      <p>Die drei PDF sind aktuell Platzhalter. Ersetze die Dateien in <code>assets/docs/</code> durch die finalen Versionen und passe bei Bedarf Grösse und Datum in <code>unterlagen.html</code> an.</p>
     </div>
   </section>
 
   <section class="section bg-navy closing wedge-t" style="--seam-accent: var(--yellow)" aria-labelledby="dl-cta">
     <div class="wrap" data-reveal>
       <p class="eyebrow">Lieber Bewegtbild</p>
-      <h2 id="dl-cta">Alles in zwei Minuten hören statt drei PDF öffnen?</h2>
+      <h2 id="dl-cta">Zwei Minuten hören statt alles lesen?</h2>
       <p>Auf der Startseite gibt es das Bewerbungsvideo – kürzer als jedes Anschreiben.</p>
-      <a class="btn" href="index.html#portfolio">Zurück zur Startseite <span class="btn__icon" aria-hidden="true">→</span></a>
+      <a class="btn" href="index.html#video">Zum Bewerbungsvideo <span class="btn__icon" aria-hidden="true">→</span></a>
     </div>
   </section>
 
@@ -104,7 +142,7 @@
     <div class="site-footer__top">
       <div>
         <img class="site-footer__brand" src="assets/logo-cream.svg" alt="Marc Ingold">
-        <p class="site-footer__line">Marc Ingold</p>
+        <p class="site-footer__line">Marc Maximilian Ingold</p>
         <p style="color:var(--navy-50);font-size:var(--step--1);margin-top:.4rem">Mediamatik · Gestaltung · Digital</p>
       </div>
       <nav class="site-footer__nav" aria-label="Footer-Navigation">
@@ -114,13 +152,13 @@
         <a href="kontakt.html">Kontakt</a>
       </nav>
       <div class="site-footer__nav">
-        <a href="mailto:mail@platzhalter.ch">mail@platzhalter.ch</a>
-        <a href="tel:+41000000000">+41 00 000 00 00</a>
-        <span style="color:var(--navy-50);font-size:var(--step--1)">Interlaken, CH</span>
+        <a href="mailto:mmin@bluewin.ch">mmin@bluewin.ch</a>
+        <a href="tel:+415126513">+41 512 65 13</a>
+        <span style="color:var(--navy-50);font-size:var(--step--1)">3852 Ringgenberg BE</span>
       </div>
     </div>
     <div class="site-footer__bottom">
-      <span>&copy; <span data-year>2026</span> Marc Ingold</span>
+      <span>&copy; <span data-year>2026</span> Marc Maximilian Ingold</span>
       <span>Diese Seite ist gebaut, um eine Reaktion zu bekommen. Hat es geklappt?</span>
     </div>
   </div>

@@ -17,6 +17,13 @@
       if (ym) window.addEventListener("load", function () {
         window.setTimeout(function () { window.scrollTo(0, parseInt(ym[1], 10)); }, 300);
       });
+      var pm = window.location.search.match(/[?&]pf=([0-9]+)/);
+      if (pm) window.addEventListener("load", function () {
+        window.setTimeout(function () {
+          var c = document.querySelector('[data-project="pf-p' + pm[1] + '"]');
+          if (c) c.click();
+        }, 250);
+      });
     } catch (e) {}
   }
 
@@ -191,7 +198,7 @@
   /* ---------------------------------------------------------------------
      7. Kompetenzfelder: Accordion
   --------------------------------------------------------------------- */
-  document.querySelectorAll(".field__row").forEach(function (row) {
+  document.querySelectorAll(".field__row, .doc__toggle").forEach(function (row) {
     row.addEventListener("click", function () {
       var open = row.getAttribute("aria-expanded") === "true";
       row.setAttribute("aria-expanded", open ? "false" : "true");
@@ -224,7 +231,8 @@
     var closeLb = function () {
       lb.classList.remove("is-open");
       document.removeEventListener("keydown", lbKey);
-      document.body.style.overflow = "";
+      var pfM = document.querySelector(".pf-modal");
+      if (!pfM || pfM.hidden) document.body.style.overflow = "";
       window.setTimeout(function () {
         lb.hidden = true;
         lbImg.removeAttribute("src");
@@ -232,18 +240,62 @@
       }, reduceMotion ? 0 : 350);
     };
 
-    document.querySelectorAll("[data-full]").forEach(function (zone) {
-      var pull = function () {
-        var img = zone.querySelector("img");
-        openLb(zone.getAttribute("data-full"), img ? img.alt : "");
-      };
-      zone.addEventListener("click", pull);
-      zone.addEventListener("keydown", function (e) {
-        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pull(); }
-      });
+    // Delegiert – funktioniert auch für Bilder, die ins Projekt-Modal geklont werden.
+    document.addEventListener("click", function (e) {
+      var zone = e.target.closest && e.target.closest("[data-full]");
+      if (!zone) return;
+      var img = zone.querySelector("img");
+      openLb(zone.getAttribute("data-full"), img ? img.alt : "");
     });
     lbClose.addEventListener("click", closeLb);
     lbBackdrop.addEventListener("click", closeLb);
+  }
+
+  /* ---------------------------------------------------------------------
+     8b. Projekt-Detail (Modal) – Kachel klicken öffnet das ganze Projekt
+  --------------------------------------------------------------------- */
+  var pfM = document.querySelector(".pf-modal");
+  if (pfM) {
+    var pfBody = pfM.querySelector(".pf-modal__body");
+    var pfPanel = pfM.querySelector(".pf-modal__panel");
+    var pfCloseBtn = pfM.querySelector(".pf-modal__close");
+    var pfBd = pfM.querySelector(".pf-modal__backdrop");
+    var pfLast = null;
+
+    var pfKey = function (e) {
+      if (e.key !== "Escape") return;
+      if (lb && lb.hidden === false) return;   // Lightbox zuerst schliessen
+      closePf();
+    };
+    var openPf = function (id) {
+      var tpl = document.getElementById(id);
+      if (!tpl || !("content" in tpl)) return;
+      pfLast = document.activeElement;
+      pfBody.innerHTML = "";
+      pfBody.appendChild(tpl.content.cloneNode(true));
+      pfM.style.setProperty("--accent", tpl.getAttribute("data-accent") || "var(--navy)");
+      pfM.hidden = false;
+      document.body.style.overflow = "hidden";
+      if (pfPanel) pfPanel.scrollTop = 0;
+      requestAnimationFrame(function () { pfM.classList.add("is-open"); });
+      pfCloseBtn.focus();
+      document.addEventListener("keydown", pfKey);
+    };
+    var closePf = function () {
+      pfM.classList.remove("is-open");
+      document.removeEventListener("keydown", pfKey);
+      window.setTimeout(function () {
+        pfM.hidden = true;
+        pfBody.innerHTML = "";
+        if (!lb || lb.hidden) document.body.style.overflow = "";
+        if (pfLast && pfLast.focus) pfLast.focus();
+      }, reduceMotion ? 0 : 350);
+    };
+    document.querySelectorAll("[data-project]").forEach(function (card) {
+      card.addEventListener("click", function () { openPf(card.getAttribute("data-project")); });
+    });
+    pfCloseBtn.addEventListener("click", closePf);
+    pfBd.addEventListener("click", closePf);
   }
 
   /* ---------------------------------------------------------------------
@@ -289,11 +341,14 @@
         return;
       }
       var frag;
-      if (/\.(mp4|webm|mov)(\?|$)/i.test(src)) {
+      if (/\.(mp4|webm|mov|m4v)(\?|$)/i.test(src)) {
         frag = document.createElement("video");
         frag.src = src;
         frag.controls = true;
         frag.autoplay = true;
+        frag.preload = "auto";
+        var poster = player.getAttribute("data-poster");
+        if (poster) frag.poster = poster;
         frag.setAttribute("playsinline", "");
       } else {
         frag = document.createElement("iframe");
@@ -337,12 +392,12 @@
           .catch(function () {
             if (status) {
               status.textContent = "Das hat gerade nicht geklappt. Schreib mir direkt an " +
-                (form.getAttribute("data-email") || "mail@platzhalter.ch") + ".";
+                (form.getAttribute("data-email") || "mmin@bluewin.ch") + ".";
               status.hidden = false;
             }
           });
       } else {
-        var to = form.getAttribute("data-email") || "mail@platzhalter.ch";
+        var to = form.getAttribute("data-email") || "mmin@bluewin.ch";
         var subject = encodeURIComponent("Nachricht über deine Website – " + (data.get("name") || ""));
         var body = encodeURIComponent(
           (data.get("message") || "") + "\n\n– " + (data.get("name") || "") + " (" + (data.get("email") || "") + ")"
