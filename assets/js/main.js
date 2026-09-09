@@ -17,6 +17,7 @@
       if (ym) window.addEventListener("load", function () {
         window.setTimeout(function () { window.scrollTo(0, parseInt(ym[1], 10)); }, 300);
       });
+<<<<<<< HEAD
       var pm = window.location.search.match(/[?&]pf=([0-9]+)/);
       if (pm) window.addEventListener("load", function () {
         window.setTimeout(function () {
@@ -24,6 +25,8 @@
           if (c) c.click();
         }, 250);
       });
+=======
+>>>>>>> 9b5cc321cfe41b26916753e92e287a85df951b5f
     } catch (e) {}
   }
 
@@ -198,7 +201,11 @@
   /* ---------------------------------------------------------------------
      7. Kompetenzfelder: Accordion
   --------------------------------------------------------------------- */
+<<<<<<< HEAD
   document.querySelectorAll(".field__row, .doc__toggle").forEach(function (row) {
+=======
+  document.querySelectorAll(".field__row").forEach(function (row) {
+>>>>>>> 9b5cc321cfe41b26916753e92e287a85df951b5f
     row.addEventListener("click", function () {
       var open = row.getAttribute("aria-expanded") === "true";
       row.setAttribute("aria-expanded", open ? "false" : "true");
@@ -231,8 +238,12 @@
     var closeLb = function () {
       lb.classList.remove("is-open");
       document.removeEventListener("keydown", lbKey);
+<<<<<<< HEAD
       var pfM = document.querySelector(".pf-modal");
       if (!pfM || pfM.hidden) document.body.style.overflow = "";
+=======
+      document.body.style.overflow = "";
+>>>>>>> 9b5cc321cfe41b26916753e92e287a85df951b5f
       window.setTimeout(function () {
         lb.hidden = true;
         lbImg.removeAttribute("src");
@@ -240,18 +251,31 @@
       }, reduceMotion ? 0 : 350);
     };
 
+<<<<<<< HEAD
     // Delegiert – funktioniert auch für Bilder, die ins Projekt-Modal geklont werden.
     document.addEventListener("click", function (e) {
       var zone = e.target.closest && e.target.closest("[data-full]");
       if (!zone) return;
       var img = zone.querySelector("img");
       openLb(zone.getAttribute("data-full"), img ? img.alt : "");
+=======
+    document.querySelectorAll("[data-full]").forEach(function (zone) {
+      var pull = function () {
+        var img = zone.querySelector("img");
+        openLb(zone.getAttribute("data-full"), img ? img.alt : "");
+      };
+      zone.addEventListener("click", pull);
+      zone.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pull(); }
+      });
+>>>>>>> 9b5cc321cfe41b26916753e92e287a85df951b5f
     });
     lbClose.addEventListener("click", closeLb);
     lbBackdrop.addEventListener("click", closeLb);
   }
 
   /* ---------------------------------------------------------------------
+<<<<<<< HEAD
      8b. Projekt-Detail (Modal) – Kachel klicken öffnet das ganze Projekt
   --------------------------------------------------------------------- */
   var pfM = document.querySelector(".pf-modal");
@@ -299,6 +323,8 @@
   }
 
   /* ---------------------------------------------------------------------
+=======
+>>>>>>> 9b5cc321cfe41b26916753e92e287a85df951b5f
      9. Cursor-Follower über Projekt-Medien (nur Desktop)
   --------------------------------------------------------------------- */
   if (finePointer && !reduceMotion) {
@@ -341,14 +367,21 @@
         return;
       }
       var frag;
+<<<<<<< HEAD
       if (/\.(mp4|webm|mov|m4v)(\?|$)/i.test(src)) {
+=======
+      if (/\.(mp4|webm|mov)(\?|$)/i.test(src)) {
+>>>>>>> 9b5cc321cfe41b26916753e92e287a85df951b5f
         frag = document.createElement("video");
         frag.src = src;
         frag.controls = true;
         frag.autoplay = true;
+<<<<<<< HEAD
         frag.preload = "auto";
         var poster = player.getAttribute("data-poster");
         if (poster) frag.poster = poster;
+=======
+>>>>>>> 9b5cc321cfe41b26916753e92e287a85df951b5f
         frag.setAttribute("playsinline", "");
       } else {
         frag = document.createElement("iframe");
@@ -392,12 +425,20 @@
           .catch(function () {
             if (status) {
               status.textContent = "Das hat gerade nicht geklappt. Schreib mir direkt an " +
+<<<<<<< HEAD
                 (form.getAttribute("data-email") || "mmin@bluewin.ch") + ".";
+=======
+                (form.getAttribute("data-email") || "mail@platzhalter.ch") + ".";
+>>>>>>> 9b5cc321cfe41b26916753e92e287a85df951b5f
               status.hidden = false;
             }
           });
       } else {
+<<<<<<< HEAD
         var to = form.getAttribute("data-email") || "mmin@bluewin.ch";
+=======
+        var to = form.getAttribute("data-email") || "mail@platzhalter.ch";
+>>>>>>> 9b5cc321cfe41b26916753e92e287a85df951b5f
         var subject = encodeURIComponent("Nachricht über deine Website – " + (data.get("name") || ""));
         var body = encodeURIComponent(
           (data.get("message") || "") + "\n\n– " + (data.get("name") || "") + " (" + (data.get("email") || "") + ")"
