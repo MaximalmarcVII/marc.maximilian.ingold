@@ -66,6 +66,9 @@
     nav.querySelectorAll("a").forEach(function (a) {
       a.addEventListener("click", closeMenu);
     });
+    nav.addEventListener("click", function (e) {
+      if (e.target === nav) closeMenu();
+    });
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape") closeMenu();
     });
